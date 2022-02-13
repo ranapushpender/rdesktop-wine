@@ -15,7 +15,7 @@ jobs:
       env:
         PAT: ${{ secrets.PAT }}
       run: | 
-        echo $PAT | docker login ghcr.io -u YourAccountOrGHOrgaNameHere --password-stdin
+        echo $PAT | docker login ghcr.io -u ranapushpender --password-stdin
         TAG=`git rev-parse --short HEAD`
         docker build . --file Dockerfile --tag ghcr.io/ranapushpender/rdesktop-wine:$TAG --tag ghcr.io/ranapushpender/rdesktop-wine:latest
         docker push ghcr.io/ranapushpender/rdesktop-wine:$TAG
