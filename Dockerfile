@@ -5,5 +5,5 @@ RUN apt-get update && apt-get install -y wget && \
   apt-key add winehq.key && \
   add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' && \
   apt-get update && \
-  apt-get install --install-recommends winehq-staging
+  apt-get install -y --install-recommends winehq-staging
   
