@@ -1,4 +1,4 @@
-FROM linuxserver/rdesktop:latest
+FROM lscr.io/linuxserver/webtop:ubuntu-xfce
 RUN apt-get update && apt-get install -y wget && \
   dpkg --add-architecture i386 && \
   wget -nc https://dl.winehq.org/wine-builds/winehq.key && \
